@@ -30,6 +30,9 @@ try:
 
         data = df_full[df_full['Vehicle'].isin(vehicles)].groupby(by = df_full['Vehicle'])['Distance (KM)'].sum()
         
+        st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+
+
         st.write("### Gráfico de comparação de médias", df_full[df_full['Vehicle'].isin(vehicles)])
 
         st.bar_chart(data=data)
