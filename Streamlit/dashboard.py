@@ -7,12 +7,12 @@ from urllib.error import URLError
 
 @st.cache
 def get_data():
-    df = pd.read_csv("../Data/trusted/fuel_consumption.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/FelipeGaleao/CGUFuelStats/master/Data/trusted/fuel_consumption.csv")
     return df.set_index("Vehicle")
 
 
 def get_full_data():
-    df = pd.read_csv("../Data/trusted/fuel_consumption.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/FelipeGaleao/CGUFuelStats/master/Data/trusted/fuel_consumption.csv")
     return df
 
 
