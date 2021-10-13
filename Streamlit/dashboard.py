@@ -29,7 +29,9 @@ try:
         st.write("### Dados brutos", df_full[df_full['Vehicle'].isin(vehicles)])
 
         data = df_full[df_full['Vehicle'].isin(vehicles)].groupby(by = df_full['Vehicle'])['Distance (KM)'].sum()
-       
+        
+        st.write("### Gráfico de comparação de médias", df_full[df_full['Vehicle'].isin(vehicles)])
+
         st.bar_chart(data=data)
         # st.altair_chart(chart, use_container_width=True)
 except URLError as e:
