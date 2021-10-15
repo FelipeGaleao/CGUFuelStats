@@ -21,6 +21,9 @@ def get_full_data():
 try:
     df = get_data()
     df_full = get_full_data()
+    
+    st.write("# Estatistica do uso de combustível pelo Consórcio Guaicurus")
+    
     df_full['Driver_Name'] = df_full.Driver_Name.str.slice(start=0, stop=5) + " (" + df_full.Driver_Code.str.slice(start= 0, stop=10) + ")"
     vehicles = st.multiselect(
         "Selecione um veículo", list(df.index.drop_duplicates())
