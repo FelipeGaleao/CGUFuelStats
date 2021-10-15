@@ -50,7 +50,7 @@ try:
         st.bar_chart(data=dfvh[['FCM (km/L)']])
         
         st.write('## Distância e Média por Motorista')
-        st.dataframe(data=dfvh[['Distance (KM)', 'FCM (km/L)', 'Driver_Name']])
+        st.dataframe(data=dfvh[['Date', 'Distance (KM)', 'FCM (km/L)', 'Driver_Name']])
         
         st.write(' ## Média por Motorista')
         dfvh = df_full[df_full['Vehicle'].isin(vehicles)].reset_index().set_index('Driver_Name')
